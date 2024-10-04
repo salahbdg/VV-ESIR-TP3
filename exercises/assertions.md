@@ -18,3 +18,8 @@ Answer the following questions:
    import static org.junit.Assert.assertEquals;
    assertEquals(1.2, 3 * 0.4, 1e-9);
    ```
+
+2. The difference between assertEquals and assertSame in Java lies in how they compare objects:
+   
+    <li>assertEquals: Compares the values of two objects or primitives for equality. For objects, it uses the .equals() method (or == for primitives). It checks whether the objects are "logically equal."</li>
+    <li>assertSame: Compares the references of two objects. It checks if the two variables point to the same object in memory.</li>
