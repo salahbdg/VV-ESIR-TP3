@@ -12,4 +12,9 @@ Answer the following questions:
 
 ## Answer
 
-1. The assertion assertTrue(3 * .4 == 1.2) fails due to floating-point precision issues. The result of **(3 * .4)** 
+1. The assertion assertTrue(3 * .4 == 1.2) fails due to floating-point precision issues. The result of **(3 * .4)** is a number close to 1.2 but not 1.2 exactly which justifies the failure of the assertion.
+   When dealing with floats, we need to define a fault tolerance
+   ```java
+   import static org.junit.Assert.assertEquals;
+   assertEquals(1.2, 3 * 0.4, 1e-9);
+   ```
