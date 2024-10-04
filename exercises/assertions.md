@@ -11,3 +11,5 @@ Answer the following questions:
 4. In JUnit 4, an exception was expected using the `@Test` annotation, while in JUnit 5 there is a special assertion method `assertThrows`. In your opinion, what are the advantages of this new way of checking expected exceptions?
 
 ## Answer
+
+1. The assertion assertTrue(3 * .4 == 1.2) fails due to floating-point precision issues. The result of **(3 * .4)** 
