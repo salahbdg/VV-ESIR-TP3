@@ -24,3 +24,23 @@ Answer the following questions:
     <li>assertEquals: Compares the values of two objects or primitives for equality. For objects, it uses the .equals() method (or == for primitives). It checks whether the objects are "logically equal."</li>
     <li>assertSame: Compares the references of two objects. It checks if the two variables point to the same object in memory.</li>
    </ul>
+
+   Here is a code used on primitives
+   ```java
+   int a = 5;
+   int b = 5;
+   assertEquals(a, b);  // Passes: Compares values (5 == 5)
+   assertSame(a, b);    // Passes: Primitives are compared by value, so both are 5
+   ```
+   The two assertions passes since they are primitives (int) with the same values.
+
+   Example with object references
+   ```java
+   String str1 = new String("hello");
+   String str2 = new String("hello");
+   
+   assertEquals(str1, str2);  // Passes: Values are equal ("hello".equals("hello"))
+   assertSame(str1, str2);    // Fails: Different object references (different memory locations)
+
+   ```
+   Here str1 and str2 hold the same information "hello", but they are two distinct references, which justifies the result of assertEquals and assertSame
