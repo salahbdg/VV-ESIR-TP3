@@ -39,4 +39,7 @@ Use the following steps to design the test suite:
 
 Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
-## Answer
+## Answer   
+
+1. With the help of *Input Space Partitioning* we identified the characteristics and blocks for each method.
+    - 
