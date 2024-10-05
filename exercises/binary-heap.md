@@ -81,6 +81,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
     * Method **Count** :
        
          **Characteristics** : The same as **Peek** and **Pop**(empty and non-empty).
+      
         
          **Blocks** :
         
