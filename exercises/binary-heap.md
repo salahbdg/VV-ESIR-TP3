@@ -208,6 +208,41 @@ For this method, we did also 3 test cases as the previous method. For the first 
     ```
 For this method, we did like before 3 test cases. For the first one, we push into an empty and the element become the root. For the second one, we push in the heap with one element, it would reorder the heap and put the smallest element as the new root. And for the third one, we push in a heep with multiple elements and we reorder them and let the smallest one as the root.   
 
+  * Method **Count**:
+       - **Test case 1**: on an empty heap
+    ```Java
+    @Test
+    void testCountEmpty(){
+    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+    assertEquals(0,heap.count());
+    }
+    ```
+      - **Test case 2**: after pushing elements
+    ```Java
+    @Test
+    void testCountPushElem(){
+    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+    heap.push(12);
+    assertEquals(1,heap.count());
+    heap.push(30);
+    assertEquals(2,heap.count());
+    }
+    ```
+
+      - **Test case 3**: after popping elements
+    ```Java
+    void testCountPopElem(){
+    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+    heap.push(12);
+    heap.push(29);
+    heap.pop();
+    assertEquals(1,heap.count());
+    }
+    ```
+
+As for this method we did 3 test cases. For the first one we tested on an empty heap, the expected outcome is 0. For the second we tested after pushing elements and it should return the number of elements pushed. As for the last one, we tested after popping, it should return the number of elements left 
+    
+
         
             
              
