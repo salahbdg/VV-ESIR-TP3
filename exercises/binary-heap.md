@@ -179,6 +179,7 @@ For this method, we did also 3 test cases as the previous method. For the first 
               ```
       
       - **Test case 2:** heap with one element
+     
              ```Java
              @Test
              void testPushOneElem(){
@@ -190,7 +191,9 @@ For this method, we did also 3 test cases as the previous method. For the first 
              }
              ```
         
+        
       - **Test case 3:** more than one element
+        
             ```Java
             @Test
             void testPushMultiElem(){
@@ -203,6 +206,7 @@ For this method, we did also 3 test cases as the previous method. For the first 
             assertEquals(2,heap.peek()); // the small one will be the root
             }
             ```
+        
             
              
             
