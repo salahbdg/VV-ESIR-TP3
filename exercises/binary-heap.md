@@ -165,10 +165,11 @@ For this method, we did also 3 test cases as the previous method. For the first 
 
    
          
-* Method **Push** :
+  * Method **Push** :
   
-    - **Test case 1:** empty heap
-              ```Java
+       - **Test case 1:** empty heap
+         
+              ``` Java
               @Test
               void testPushEmpty(){
               BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
@@ -180,7 +181,7 @@ For this method, we did also 3 test cases as the previous method. For the first 
       
       - **Test case 2:** heap with one element
      
-             ```Java
+             ``` Java
              @Test
              void testPushOneElem(){
              BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
@@ -194,7 +195,7 @@ For this method, we did also 3 test cases as the previous method. For the first 
         
       - **Test case 3:** more than one element
         
-            ```Java
+            ``` Java
             @Test
             void testPushMultiElem(){
             BinaryHeap<Integer> heap = new Binary<>(Integer::compareTo);
