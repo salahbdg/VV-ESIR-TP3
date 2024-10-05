@@ -51,7 +51,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
                                   - Random : The elements are placed in a random order but the heap property should hold.
             **Blocks** :
          1. If the heap is empty, it should throw an exception `NoSuchElementException`.   
-         2. If there's one element, return that element.   
+         2. If there's one element, return that element and leave the heap empty.   
          3. If there's more than one element and in a correct order, it returns the minimum element.
          4. If there's more than one element and in a random order, returns the minimum element, but hold the heap property.
     * Method **Peek** :
@@ -118,6 +118,7 @@ The Characteristics that are more common to more than one method are **empty** a
           ```Java
           @Test
           void testPopMultipleElem(){
+          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
           heap.push(14);
           heap.push(4);
           heap.push(20);
@@ -125,6 +126,84 @@ The Characteristics that are more common to more than one method are **empty** a
           assertEquals(2, heap.count());   // the staying elements: 20,14
           }
           ```
+
+For this method we did 3 test cases. The first one we put an empty heap as an input and we expect an exception `NoSuchElementException`. Our test will compare the BinaryHeap and see if there's any element to do a comparaison and when it won't find, it will throw an exception. For the second one, as an input it takes a heap with one element, returns the element and leave the heap empty. As for the last one, it takes a heap with multiple elements in correct order, returns the smallest one, and adapt the heap appropriatly. 
+
+  * Method **Peek** :
+       - **Test case 1:** empty heap
+          ```Java
+          @Test
+          void testPeekEmpty(){
+          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+          assertThrows(NoSuchElementException.class,heap::peek);
+          }
+          ```
+       - **Test case 2:** one element
+         ```Java
+         @Test
+         void testPeekOneElem(){
+         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+         heap.push(16);
+         assertEquals(16,heap.peek());
+         assertEquals(1,heap.count()); // not removing just peeking
+         }
+         ```
+       - **Test case 3:** more than one element
+         ```Java
+         @Test
+         void testPeekMultiElem(){
+         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+         heap.push(20);
+         heap.push(4);
+         heap.push(13);
+         assertEquals(4, heap.peek());// the smallest element
+         assertEquals(3, heap.count()); // element are not removed they stay the same
+         }
+         ```
+For this method, we did also 3 test cases as the previous method. For the first test case is the same as the first one as the the first one in the pop method. As for the second, it returns the element without removing it. And for the third one it returns the smallest element without removing it.   
+
+
+   
+         
+* Method **Push** :
+            - **Test case 1:** empty heap
+              ```Java
+              @Test
+              void testPushEmpty(){
+              BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+              heap.push(18);
+              assertEquals(1,heap.count());
+              assertEquals(18, heap.peek()); // the element that we pushed become the root
+              }
+              ```
+           - **Test case 2:** heap with one element
+             ```Java
+             @Test
+             void testPushOneElem(){
+             BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+             heap.push(16);
+             heap.push(3);
+             assertEquals(2,heap.count());
+             assertEquals(16,heap.peek());// the small one will be the new root
+             }
+             ```
+          - **Test case 3:** more than one element
+            ```Java
+            @Test
+            void testPushMultiElem(){
+            BinaryHeap<Integer> heap = new Binary<>(Integer::compareTo);
+            heap.push(20);
+            heap.push(10);
+            heap.push(25);
+            heap.push(2);
+            assertEquals(4,heap.count());
+            assertEquals(2,heap.peek()); // the small one will be the root
+            }
+            ```
+            
+             
+            
+   
           
 
 
