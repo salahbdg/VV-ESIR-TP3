@@ -166,7 +166,8 @@ For this method, we did also 3 test cases as the previous method. For the first 
    
          
 * Method **Push** :
-            - **Test case 1:** empty heap
+  
+    - **Test case 1:** empty heap
               ```Java
               @Test
               void testPushEmpty(){
@@ -176,7 +177,8 @@ For this method, we did also 3 test cases as the previous method. For the first 
               assertEquals(18, heap.peek()); // the element that we pushed become the root
               }
               ```
-           - **Test case 2:** heap with one element
+      
+      - **Test case 2:** heap with one element
              ```Java
              @Test
              void testPushOneElem(){
@@ -187,7 +189,8 @@ For this method, we did also 3 test cases as the previous method. For the first 
              assertEquals(16,heap.peek());// the small one will be the new root
              }
              ```
-          - **Test case 3:** more than one element
+        
+      - **Test case 3:** more than one element
             ```Java
             @Test
             void testPushMultiElem(){
