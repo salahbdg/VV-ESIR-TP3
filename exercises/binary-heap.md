@@ -56,12 +56,8 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
          4. If there's more than one element and in a random order, returns the minimum element, but hold the heap property.
     * Method **Peek** :
    
-          **Characteristics** :
-      
-             The same as the **Pop's** characteristics.
-      
-          **Blocks** :
-      
+         **Characteristics** :The same as the **Pop's** characteristics.
+        **Blocks** :   
          1. If the heap is empty, it should throw an exception `NoSuchElementException`.   
          2. If there's one element, return that element.   
          3. If there's more than one element and in a correct order, it returns the minimum element.
