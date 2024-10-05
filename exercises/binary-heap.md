@@ -165,9 +165,9 @@ For this method, we did also 3 test cases as the previous method. For the first 
 
    
          
-  * Method **Push** :
+* Method **Push** :
   
-       - **Test case 1:** empty heap
+  - **Test case 1:** empty heap
          ```Java
          @Test
          void testPushEmpty(){
@@ -197,7 +197,7 @@ For this method, we did also 3 test cases as the previous method. For the first 
     ```Java
     @Test
     void testPushMultiElem(){
-    BinaryHeap<Integer> heap = new Binary<>(Integer::compareTo);
+    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
     heap.push(20);
     heap.push(10);
     heap.push(25);
@@ -206,6 +206,8 @@ For this method, we did also 3 test cases as the previous method. For the first 
     assertEquals(2,heap.peek()); // the small one will be the root
     }
     ```
+For this method, we did like before 3 test cases. For the first one, we push into an empty and the element become the root. For the second one, we push in the heap with one element, it would reorder the heap and put the smallest element as the new root. And for the third one, we push in a heep with multiple elements and we reorder them and let the smallest one as the root.   
+
         
             
              
