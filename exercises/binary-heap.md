@@ -180,16 +180,16 @@ For this method, we did also 3 test cases as the previous method. For the first 
       
       - **Test case 2:** heap with one element
      
-             ``` Java
-             @Test
-             void testPushOneElem(){
-             BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-             heap.push(16);
-             heap.push(3);
-             assertEquals(2,heap.count());
-             assertEquals(16,heap.peek());// the small one will be the new root
-             }
-             ```
+        ```Java
+        @Test
+        void testPushOneElem(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(16);
+        heap.push(3);
+        assertEquals(2,heap.count());
+        assertEquals(16,heap.peek());// the small one will be the new root
+        }
+        ```
         
         
       - **Test case 3:** more than one element
