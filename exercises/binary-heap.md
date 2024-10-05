@@ -57,6 +57,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
     * Method **Peek** :
    
          **Characteristics** :The same as the **Pop's** characteristics.
+      
         **Blocks** :   
          1. If the heap is empty, it should throw an exception `NoSuchElementException`.   
          2. If there's one element, return that element.   
