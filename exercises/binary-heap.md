@@ -168,17 +168,16 @@ For this method, we did also 3 test cases as the previous method. For the first 
 * Method **Push** :
   
   - **Test case 1:** empty heap
-
   
-         ```Java
-         @Test
-         void testPushEmpty(){
-         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-         heap.push(18);
-         assertEquals(1,heap.count());
-         assertEquals(18, heap.peek()); // the element that we pushed become the root
+    ```Java
+       @Test
+        void testPushEmpty(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(18);
+        assertEquals(1,heap.count());
+        assertEquals(18, heap.peek()); // the element that we pushed become the root
          }
-         ```
+    ```
       
       - **Test case 2:** heap with one element
      
