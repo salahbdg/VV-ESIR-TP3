@@ -194,18 +194,18 @@ For this method, we did also 3 test cases as the previous method. For the first 
         
       - **Test case 3:** more than one element
         
-            ``` Java
-            @Test
-            void testPushMultiElem(){
-            BinaryHeap<Integer> heap = new Binary<>(Integer::compareTo);
-            heap.push(20);
-            heap.push(10);
-            heap.push(25);
-            heap.push(2);
-            assertEquals(4,heap.count());
-            assertEquals(2,heap.peek()); // the small one will be the root
-            }
-            ```
+    ```Java
+    @Test
+    void testPushMultiElem(){
+    BinaryHeap<Integer> heap = new Binary<>(Integer::compareTo);
+    heap.push(20);
+    heap.push(10);
+    heap.push(25);
+    heap.push(2);
+    assertEquals(4,heap.count());
+    assertEquals(2,heap.peek()); // the small one will be the root
+    }
+    ```
         
             
              
