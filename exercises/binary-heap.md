@@ -82,7 +82,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
       2. If the heap has one element, insert the new element but maintain the heap structure.
       3. If the heap has more than one elements, refix the order if the binary search tree structure after insertion.
       
-      * Method **Count** :
+    * Method **Count** :
        
          **Characteristics** : The same as **Peek** and **Pop**(empty and non-empty).
         
