@@ -114,7 +114,18 @@ The Characteristics that are more common to more than one method are **empty** a
           }
           ```
          
-        - **Test case 3:** more than one element   
+        - **Test case 3:** more than one element
+          ```Java
+          @Test
+          void testPopMultipleElem(){
+          heap.push(14);
+          heap.push(4);
+          heap.push(20);
+          assertEquals(4,heap.pop());//the small element
+          assertEquals(2, heap.count());   // the staying elements: 20,14
+          }
+          ```
+          
 
 
 
