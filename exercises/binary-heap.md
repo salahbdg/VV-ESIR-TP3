@@ -90,7 +90,24 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
       2. If the heap has one element, return 1.
       3. If the heap has more elements, return the correct number of elements after push or pop operations.
 
-The Characteristics that are more common to more than one method are **empty** and the **non-empty**.     
+The Characteristics that are more common to more than one method are **empty** and the **non-empty**.    
+
+2. Now we are going to write test cases that cover the description we did previously.
+
+   * Method **Pop** :
+        - **Test case 1:** from an empty heap
+          ```Java
+          @Test
+          void testPopEmpty(){
+          BinaryHeap<Integer> heap = new BinaryHeap<>(Comparator.naturalOrder());
+          assertThrows(NoSuchElementException.class, heap::pop);
+          }
+          ```
+        - **Test case 2:** a heap with one element
+          ```Java
+          @Test
+          void testPopOneElem(){
+          BinaryHeap<Integer> heap = new BinaryHeap<>(Comaparator.naturalOrder());
 
 
         
