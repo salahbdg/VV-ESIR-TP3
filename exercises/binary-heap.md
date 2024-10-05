@@ -43,6 +43,7 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
 
 1. With the help of *Input Space Partitioning* we identified the characteristics and blocks for each method.
     * Method **Pop** :
+      
          **Characteristics :**
          1. **Heap Size** : - Empty : There's no elements
                             - Non-Empty : There's at least one element
@@ -53,26 +54,40 @@ Use the project in [tp3-heap](../code/tp3-heap) to complete this exercise.
          2. If there's one element, return that element.   
          3. If there's more than one element and in a correct order, it returns the minimum element.
          4. If there's more than one element and in a random order, returns the minimum element, but hold the heap property.
-      * Method **Peek** :
+    * Method **Peek** :
+   
           **Characteristics** :
+      
              The same as the **Pop's** characteristics.
+      
           **Blocks** :
+      
          1. If the heap is empty, it should throw an exception `NoSuchElementException`.   
          2. If there's one element, return that element.   
          3. If there's more than one element and in a correct order, it returns the minimum element.
          4. If there's more than one element and in a random order, returns the minimum element, but without erasing.
     * Method **Push** :
+   
         **Charasteristics** :
+      
       1. **Heap Size** :  The same as the previous ones.
-      2. **Position of elements**(influence the order after the insertion) : - Root : If the element is smaller than the current root, it becomes the new root.
-                                                                             - Leaf : The added element as a leaf but it might cause fixing the binary search tree structure.
+      2. **Position of elements**(influence the order after the insertion) :   
+            - Root : If the element is smaller than the current root, it becomes the new root.
+            - Leaf : The added element as a leaf but it might cause fixing the binary search tree structure.
+         
+            
          **Blocks** :
+         
       1. If the heap is empty, insert the elements as the root.
       2. If the heap has one element, insert the new element but maintain the heap structure.
       3. If the heap has more than one elements, refix the order if the binary search tree structure after insertion.
-      * Method **Count** :   
+      
+      * Method **Count** :
+       
          **Characteristics** : The same as **Peek** and **Pop**(empty and non-empty).
+        
          **Blocks** :
+        
       1. If the heap is empty, return 0.
       2. If the heap has one element, return 1.
       3. If the heap has more elements, return the correct number of elements after push or pop operations.
