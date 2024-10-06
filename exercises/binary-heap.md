@@ -338,6 +338,7 @@ This is the new cases that we added :
         assertEquals(10, heap.peek());
     }
 ```
+
 * We tested if the heap can count duplicate values.
 ```Java
  @Test
