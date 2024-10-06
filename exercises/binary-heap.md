@@ -301,7 +301,71 @@ void testReorderUpMulti(){
 4. Using **PiTest** this is the result that we had a mutant score of 95%.   
     ![coverage](https://github.com/user-attachments/assets/c3d745be-20f6-4702-a0e9-2ba7567ff7a3)
 
-After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 3%.   ![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)   
+After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 3%.   ![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)     
+This is the new cases that we added :   
+* We tested by pushing null element to see the reaction of the heap.
+```Java
+@Test
+    void testPushNull(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        assertThrows(IllegalArgumentException.class, ()->heap.push(null));
+    }
+```
+* We tested by pushing large number
+```Java
+@Test
+    void testPushLargeNum(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(Integer.MAX_VALUE);
+        heap.push(Integer.MIN_VALUE);
+        assertEquals(2, heap.count());
+        assertEquals(Integer.MIN_VALUE,heap.peek());
+    }
+```
+* We tested how the heap will react if we pop after multiple pushing.
+  ```Java
+   @Test
+    void testPopAfterMultiAdd() {
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(5);
+        heap.push(10);
+        heap.push(2);
+        heap.push(1);
+        heap.pop(); // pops 1
+        heap.pop(); // pops 2
+        heap.pop(); // pops 5
+        assertEquals(1, heap.count()); // only 10 should remain
+        assertEquals(10, heap.peek());
+    }
+```
+* We tested if the heap can count duplicate values.
+```Java
+ @Test
+    void testCountWithDupliVal() {
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(5);
+        heap.push(5);
+        heap.push(5);
+        assertEquals(3, heap.count());
+        heap.pop(); // pops one of the 5s
+        assertEquals(2, heap.count());
+    }
+```   
+* We tested the consistency of `Peek` method to see if it returns the right result even after poping multiple times .
+  ```Java
+  @Test
+    void testPeekConsist() {
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(3);
+        heap.push(2);
+        heap.push(4);
+        assertEquals(2, heap.peek());
+        heap.pop();
+        assertEquals(3, heap.peek());
+        heap.pop();
+        assertEquals(4, heap.peek());
+    }
+  ```
 
 
 
