@@ -323,6 +323,7 @@ This is the new cases that we added :
     }
 ```
 * We tested how the heap will react if we pop after multiple pushing.
+
   ```Java
    @Test
     void testPopAfterMultiAdd() {
@@ -340,6 +341,7 @@ This is the new cases that we added :
 ```
 
 * We tested if the heap can count duplicate values.
+
 ```Java
  @Test
     void testCountWithDupliVal() {
@@ -353,6 +355,7 @@ This is the new cases that we added :
     }
 ```   
 * We tested the consistency of `Peek` method to see if it returns the right result even after poping multiple times .
+
   ```Java
   @Test
     void testPeekConsist() {
