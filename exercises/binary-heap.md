@@ -339,8 +339,7 @@ This is the new cases that we added :
         assertEquals(10, heap.peek());
     }
 ```
-
- * We tested if the heap can count duplicate values.
+* We tested how the heap will react if we pop after multiple pushing.
 
 ```Java
  @Test
@@ -353,7 +352,10 @@ This is the new cases that we added :
         heap.pop(); // pops one of the 5s
         assertEquals(2, heap.count());
     }
-```   
+```  
+ 
+
+ 
 * We tested the consistency of `Peek` method to see if it returns the right result even after poping multiple times .
 
   ```Java
