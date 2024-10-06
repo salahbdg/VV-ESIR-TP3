@@ -243,7 +243,62 @@ For this method, we did like before 3 test cases. For the first one, we push int
     }
     ```
 
-As for this method we did 3 test cases. For the first one we tested on an empty heap, the expected outcome is 0. For the second we tested after pushing elements and it should return the number of elements pushed. As for the last one, we tested after popping, it should return the number of elements left 
+As for this method we did 3 test cases. For the first one we tested on an empty heap, the expected outcome is 0. For the second we tested after pushing elements and it should return the number of elements pushed. As for the last one, we tested after popping, it should return the number of elements left.   
+
+3. To attend a full coverage of all the code we added some new cases.
+    * **Test case:** On `Push` method (pushing same element many time (duplication))
+   ```Java
+    @Test
+    void testPushDupElem(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(12);
+        heap.push(12);
+        assertEquals(12,heap.pop());
+        assertEquals(12,heap.pop());
+    }
+   ```
+On this case we tested if the heap works correctly even if there's duplication.   
+
+   * **Test case:** Pop all elements in the heap
+```Java
+@Test
+    void testPopElem(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(12);
+        heap.push(13);
+        heap.pop();
+        heap.pop();
+        assertThrows(NoSuchElementException.class,heap::pop);
+    }
+```
+On this case we tested to see the behavior of the heap when we remove all the elements.   
+
+  * **Test case:** ReorderUp for the function restoreOrderUp to see if the logic of the function can be executed on multiple levels.
+```Java
+void testReorderUpMulti(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(12);
+        heap.push(13);
+        heap.push(14);
+        heap.push(5);
+        assertEquals(5,heap.peek());
+    }
+```
+  * **Test case:** ReorderDown for the fucntion restoreOrderDown same as the previous to see if the logic can be executed on different levels.
+    ```Java
+     @Test
+    void testReorderDownMulti(){
+        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
+        heap.push(12);
+        heap.push(13);
+        heap.push(10);
+        heap.push(5);
+        heap.pop();
+        assertEquals(10,heap.peek());
+
+    }
+    ```
+    
     
 
         
