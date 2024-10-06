@@ -107,7 +107,7 @@ The Characteristics that are more common to more than one method are **empty** a
           ```Java
           @Test
           void testPopOneElem(){
-          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::comparerTo);
+          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
           heap.push(10);
           assertEquals(10, heap.pop());
           assertEquals(0, heap.count());
