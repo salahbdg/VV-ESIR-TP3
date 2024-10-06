@@ -233,6 +233,7 @@ For this method, we did like before 3 test cases. For the first one, we push int
 
       - **Test case 3**: after popping elements
     ```Java
+    @Test
     void testCountPopElem(){
     BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
     heap.push(12);
