@@ -340,10 +340,9 @@ This is the new cases that we added :
     }
 ```
 
-* We tested how the heap will react if we pop after multiple pushing.
-
+ * We tested to see it still count correctly even it's duplicate values
 ```Java
- @Test
+@Test
     void testCountWithDupliVal() {
         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
         heap.push(5);
@@ -353,7 +352,8 @@ This is the new cases that we added :
         heap.pop(); // pops one of the 5s
         assertEquals(2, heap.count());
     }
-```  
+```
+
  
 
  
