@@ -340,7 +340,7 @@ This is the new cases that we added :
     }
 ```
 
-* We tested if the heap can count duplicate values.
+ * We tested if the heap can count duplicate values.
 
 ```Java
  @Test
