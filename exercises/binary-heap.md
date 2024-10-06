@@ -301,6 +301,11 @@ void testReorderUpMulti(){
 4. Using **PiTest** this is the result that we had a mutant score of 95%.   
     ![coverage](https://github.com/user-attachments/assets/c3d745be-20f6-4702-a0e9-2ba7567ff7a3)
 
+After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 3%.   ![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)   
+
+
+
+
             
    
           
