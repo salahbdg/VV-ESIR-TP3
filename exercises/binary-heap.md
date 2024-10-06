@@ -339,6 +339,7 @@ This is the new cases that we added :
         assertEquals(10, heap.peek());
     }
 ```
+
 * We tested how the heap will react if we pop after multiple pushing.
 
 ```Java
