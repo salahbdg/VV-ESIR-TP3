@@ -62,11 +62,14 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
       - Day : between 1 and 31 based on the month and leap year (28 or 29) and invalid values like 0 and 32.
       
    * **is LeapYear:**
-          - Divisible by 4 but not 100, by 100 but not by 400, by 400 and not divisible by 4.
+     
+      - Divisible by 4 but not 100, by 100 but not by 400, by 400 and not divisible by 4.
    * **nextDate()** and **previousDate()**
-          - Dates Types : like Middle, end of month or end of year, or when there's leap year transition.  The beginning of the year or the month or when it's non leap year transition.
+     
+      - Dates Types : like Middle, end of month or end of year, or when there's leap year transition.  The beginning of the year or the month or when it's non leap year transition.
    * **compareTo(Date date)** :
-          - Comparison with different cases : Same day, earlier or later or null value.
+     
+      - Comparison with different cases : Same day, earlier or later or null value.
 
 The characteristic that is common between method it's the `leapYear`. Which is common between `isValidate`, `isLeapYear` and `nextDay` and `previousDate`.   
 
