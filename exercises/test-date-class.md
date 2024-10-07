@@ -52,4 +52,18 @@ Use the following steps to design the test suite:
 Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
+1. The characteritics and blocks for each method :
+    * Constructor && `isValidate(int day, int month, int year)` :
+          - Year : Valid range between 1 and 9999, Extreme values like 0 or negative or too large.
+          - Month : Between 1 and 12, not acceptable 0, 13 and negative.
+          - Day : between 1 and 31 based on the month and leap year (28 or 29) and invalid values like 0 and 32.
+   * **is LeapYear:**
+          - Divisible by 4 but not 100, by 100 but not by 400, by 400 and not divisible by 4.
+   * **nextDate()** and **previousDate()**
+          - Dates Types : like Middle, end of month or end of year, or when there's leap year transition.  The beginning of the year or the month or when it's non leap year transition.
+   * **compareTo(Date date)** :
+          - Comparison with different cases : Same day, earlier or later or null value.
 
+The characteristic that is common between method it's the `leapYear`. Which is common between `isValidate`, `isLeapYear` and `nextDay` and `previousDate`.   
+
+2. Each test case is described in the code <a href='https://github.com/salahbdg/VV-ESIR-TP3/blob/dddd/code/tp3-date/src/test/java/fr/istic/vv/DateTest.java'>below</a>
