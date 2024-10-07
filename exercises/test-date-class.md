@@ -73,4 +73,8 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 The characteristic that is common between method it's the `leapYear`. Which is common between `isValidate`, `isLeapYear` and `nextDay` and `previousDate`.   
 
-2. Each test case is described in the code <a href='https://github.com/salahbdg/VV-ESIR-TP3/blob/dddd/code/tp3-date/src/test/java/fr/istic/vv/DateTest.java'>below</a>
+2. Each test case is described in the code <a href='https://github.com/salahbdg/VV-ESIR-TP3/blob/dddd/code/tp3-date/src/test/java/fr/istic/vv/DateTest.java'>below</a>. In this step we implemented the `Date` Class and and designed test cases for each method. We run them and assured that every test case works correctly until all the tests passed. The test cases cover all the scenarios possible.
+3. In this step, we are going to check if the test cover fucntions that use more than two boolean operators. The most complicated one is the one of the `leapYear` which uses operator **AND** and **OR** to verify if the year is divisible by 4 and not by 100 or divisible by 400. And in our test cases we already tested on this exceptional cases, so basically we already satisfied the **Base Choice Coverage**. Given that we satisfied the coverage for the most complicated one, we assume that for the other cases where it's not that complicated it's already satisfied.
+4. Using **pitTest** we have a mutation score of 96%. Which means that our tests are comprehensive and succesfully detected and failed when code was altered by the mutation testing tool. Also it shows that most of the potential bugs will be getting caught by our test suite. 
+![pitest1](https://github.com/user-attachments/assets/c0b862f8-2179-4bd3-8684-5c3270b9adc1)
+
