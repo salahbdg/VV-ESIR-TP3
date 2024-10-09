@@ -75,7 +75,9 @@ The characteristic that is common between method it's the `leapYear`. Which is c
 
 2. Each test case is described in the code <a href='https://github.com/salahbdg/VV-ESIR-TP3/blob/dddd/code/tp3-date/src/test/java/fr/istic/vv/DateTest.java'>below</a>. In this step we implemented the `Date` Class and and designed test cases for each method. We run them and assured that every test case works correctly until all the tests passed. The test cases cover all the scenarios possible.
 3. In this step, we are going to check if the test cover fucntions that use more than two boolean operators. The most complicated one is the one of the `leapYear` which uses operator **AND** and **OR** to verify if the year is divisible by 4 and not by 100 or divisible by 400. And in our test cases we already tested on this exceptional cases, so basically we already satisfied the **Base Choice Coverage**. Given that we satisfied the coverage for the most complicated one, we assume that for the other cases where it's not that complicated,so it's already satisfied.
-4. Using **pitTest** we have a mutation score of 81%. Which means that our tests are comprehensive but we can increase it. 
+4. ![image](https://github.com/user-attachments/assets/d71b3184-b901-4b5d-90ff-073732d5530d)
+
+5. Using **pitTest** we have a mutation score of 81%. Which means that our tests are comprehensive but we can increase it. 
 ![pitest1](https://github.com/user-attachments/assets/c0b862f8-2179-4bd3-8684-5c3270b9adc1)
 So to improve the mutation score we added some new test cases to try to cover all the lines of code and almost all the scenarios possible and the new mutation scored passed to 90% which means that our code is better than he was and that our test can detect some potential bugs.
 
