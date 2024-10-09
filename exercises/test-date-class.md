@@ -85,7 +85,9 @@ So to improve the mutation score we added some new test cases to try to cover al
 ![pitest2](https://github.com/user-attachments/assets/c1c939f5-aa6a-42cd-b963-606b1dea83de)   
 We did more changes so that the code is full coverage and to increase the mutation score. And we achieved a score of 92%, 2% better than we had before. That shows that the code become more resilient and well-tested.
 
-![pitest3](https://github.com/user-attachments/assets/757cd93d-7365-4824-a985-f802493e6ff8)
+![pitest3](https://github.com/user-attachments/assets/757cd93d-7365-4824-a985-f802493e6ff8)   
+
+In summary, the live mutants that we found before adding new test cases, were about boundaries, we had to test the edges every time and add more scenarios of dates at the beginnig or the end of the month or the year. So our test suite could contain almost every possible scenarios 
 
 
 
