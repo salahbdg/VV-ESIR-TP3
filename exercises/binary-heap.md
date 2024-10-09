@@ -118,8 +118,8 @@ As for this method we did 3 test cases. For the first one we tested on an empty 
 4. Using **PiTest** this is the result that we had a mutant score of 82%.   
     ![coverage](https://github.com/user-attachments/assets/c3d745be-20f6-4702-a0e9-2ba7567ff7a3)
 
-After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 1%.   
-![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)    
+After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 4%.   
+![image](https://github.com/user-attachments/assets/ad8d3fb5-7f69-42a2-9e49-d9eb6f87d03a)
 
 This is the new cases that we added :   
 * We tested by pushing null element to see the reaction of the heap.
