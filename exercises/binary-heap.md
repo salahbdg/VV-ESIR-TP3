@@ -115,10 +115,10 @@ As for this method we did 3 test cases. For the first one we tested on an empty 
 
 3. In our case, we don't have any boolean operators. 
 
-4. Using **PiTest** this is the result that we had a mutant score of 95%.   
+4. Using **PiTest** this is the result that we had a mutant score of 81%.   
     ![coverage](https://github.com/user-attachments/assets/c3d745be-20f6-4702-a0e9-2ba7567ff7a3)
 
-After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 3%.   ![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)     
+After refactoring the test suite we added some new test cases and we noticed that the mutation score improved by 2%.   ![coverage2](https://github.com/user-attachments/assets/a72eb3c5-4b36-43de-839d-4db7cb38e1d4)     
 This is the new cases that we added :   
 * We tested by pushing null element to see the reaction of the heap.
 ```Java
