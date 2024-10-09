@@ -254,7 +254,7 @@ just to see if it will be tested correctly
         assertEquals(10, heap.peek());
     }
 
-    // test if he count the equal values
+    // test if it counts the equal values
     @Test
     void testCountWithDupliVal() {
         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
