@@ -113,7 +113,7 @@ For this method, we did like before 3 test cases. For the first one, we push int
 
 As for this method we did 3 test cases. For the first one we tested on an empty heap, the expected outcome is 0. For the second we tested after pushing elements and it should return the number of elements pushed. As for the last one, we tested after popping, it should return the number of elements left.   
 
-3. To attend a full coverage of all the code we added some new cases.
+3. In our case, we don't have any boolean operators. 
 
 4. Using **PiTest** this is the result that we had a mutant score of 95%.   
     ![coverage](https://github.com/user-attachments/assets/c3d745be-20f6-4702-a0e9-2ba7567ff7a3)
