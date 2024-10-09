@@ -44,3 +44,31 @@ Answer the following questions:
 
    ```
    Here str1 and str2 hold the same information "hello", but they are two distinct references, which justifies the result of assertEquals and assertSame
+
+   3. fail keyword can be used in several context others than the one mentioned above:
+   Fail can be used to mark a long running operation that exceeded a certain time limit
+   In this code lonRunningFúnction() runs for 6000ms using Thread.sleep(6000), using this we 
+      ```java
+      public class TimeoutTest {
+
+    @Test
+    void testTimeout() {
+        long startTime = System.currentTimeMillis();
+        
+        longRunningFunction();
+
+        if (System.currentTimeMillis() - startTime > 5000) {
+            fail("Test failed due to timeout: function took too long.");
+        }
+    }
+
+    private void longRunningFunction() {
+        // Simulate long running operation
+        try {
+            Thread.sleep(6000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+      ```
