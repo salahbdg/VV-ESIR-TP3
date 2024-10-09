@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.NoSuchElementException;
 
 class BinaryHeapTest {
-    // testign on an empty so the code should return that the heap is empty
+    // testing on an empty so the code should return that the heap is empty
     @Test
     void testPopEmpty(){
         BinaryHeap<Integer> heap = new BinaryHeap<>(Comparator.<Integer>naturalOrder());
