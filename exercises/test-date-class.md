@@ -79,6 +79,7 @@ The characteristic that is common between method it's the `leapYear`. Which is c
 
 5. Using **pitTest** we have a mutation score of 81%. Which means that our tests are comprehensive but we can increase it. 
 ![pitest1](https://github.com/user-attachments/assets/c0b862f8-2179-4bd3-8684-5c3270b9adc1)
+
 So to improve the mutation score we added some new test cases to try to cover all the lines of code and almost all the scenarios possible and the new mutation scored passed to 90% which means that our code is better than he was and that our test can detect some potential bugs.
 
 ![pitest2](https://github.com/user-attachments/assets/c1c939f5-aa6a-42cd-b963-606b1dea83de)   
