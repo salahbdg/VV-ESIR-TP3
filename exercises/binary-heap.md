@@ -95,71 +95,11 @@ The Characteristics that are more common to more than one method are **empty** a
 2. Now we are going to write test cases that cover the description we did previously.
 
    * Method **Pop** :
-        - **Test case 1:** from an empty heap
-          ```Java
-          @Test
-          void testPopEmpty(){
-          BinaryHeap<Integer> heap = new BinaryHeap<>(Comparator.naturalOrder());
-          assertThrows(NoSuchElementException.class, heap::pop);
-          }
-          ```
-        - **Test case 2:** a heap with one element
-          ```Java
-          @Test
-          void testPopOneElem(){
-          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-          heap.push(10);
-          assertEquals(10, heap.pop());
-          assertEquals(0, heap.count());
-          }
-          ```
-         
-        - **Test case 3:** more than one element
-          ```Java
-          @Test
-          void testPopMultipleElem(){
-          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-          heap.push(14);
-          heap.push(4);
-          heap.push(20);
-          assertEquals(4,heap.pop());//the small element
-          assertEquals(2, heap.count());   // the staying elements: 20,14
-          }
-          ```
 
 For this method we did 3 test cases. The first one we put an empty heap as an input and we expect an exception `NoSuchElementException`. Our test will compare the BinaryHeap and see if there's any element to do a comparaison and when it won't find, it will throw an exception. For the second one, as an input it takes a heap with one element, returns the element and leave the heap empty. As for the last one, it takes a heap with multiple elements in correct order, returns the smallest one, and adapt the heap appropriatly. 
 
   * Method **Peek** :
-       - **Test case 1:** empty heap
-          ```Java
-          @Test
-          void testPeekEmpty(){
-          BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-          assertThrows(NoSuchElementException.class,heap::peek);
-          }
-          ```
-       - **Test case 2:** one element
-         ```Java
-         @Test
-         void testPeekOneElem(){
-         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-         heap.push(16);
-         assertEquals(16,heap.peek());
-         assertEquals(1,heap.count()); // not removing just peeking
-         }
-         ```
-       - **Test case 3:** more than one element
-         ```Java
-         @Test
-         void testPeekMultiElem(){
-         BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-         heap.push(20);
-         heap.push(4);
-         heap.push(13);
-         assertEquals(4, heap.peek());// the smallest element
-         assertEquals(3, heap.count()); // element are not removed they stay the same
-         }
-         ```
+
 For this method, we did also 3 test cases as the previous method. For the first test case is the same as the first one as the the first one in the pop method. As for the second, it returns the element without removing it. And for the third one it returns the smallest element without removing it.   
 
 
@@ -167,81 +107,9 @@ For this method, we did also 3 test cases as the previous method. For the first 
          
 * Method **Push** :
   
-  - **Test case 1:** empty heap
-  
-    ```Java
-       @Test
-        void testPushEmpty(){
-        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-        heap.push(18);
-        assertEquals(1,heap.count());
-        assertEquals(18, heap.peek()); // the element that we pushed become the root
-         }
-    ```
-      
-      - **Test case 2:** heap with one element
-     
-        ```Java
-        @Test
-        void testPushOneElem(){
-        BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-        heap.push(16);
-        heap.push(3);
-        assertEquals(2,heap.count());
-        assertEquals(16,heap.peek());// the small one will be the new root
-        }
-        ```
-        
-        
-      - **Test case 3:** more than one element
-        
-    ```Java
-    @Test
-    void testPushMultiElem(){
-    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-    heap.push(20);
-    heap.push(10);
-    heap.push(25);
-    heap.push(2);
-    assertEquals(4,heap.count());
-    assertEquals(2,heap.peek()); // the small one will be the root
-    }
-    ```
 For this method, we did like before 3 test cases. For the first one, we push into an empty and the element become the root. For the second one, we push in the heap with one element, it would reorder the heap and put the smallest element as the new root. And for the third one, we push in a heep with multiple elements and we reorder them and let the smallest one as the root.   
 
   * Method **Count**:
-       - **Test case 1**: on an empty heap
-    
-    ```Java
-    @Test
-    void testCountEmpty(){
-    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-    assertEquals(0,heap.count());
-    }
-    ```
-      - **Test case 2**: after pushing elements
-    ```Java
-    @Test
-    void testCountPushElem(){
-    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-    heap.push(12);
-    assertEquals(1,heap.count());
-    heap.push(30);
-    assertEquals(2,heap.count());
-    }
-    ```
-
-      - **Test case 3**: after popping elements
-    ```Java
-    @Test
-    void testCountPopElem(){
-    BinaryHeap<Integer> heap = new BinaryHeap<>(Integer::compareTo);
-    heap.push(12);
-    heap.push(29);
-    heap.pop();
-    assertEquals(1,heap.count());
-    }
-    ```
 
 As for this method we did 3 test cases. For the first one we tested on an empty heap, the expected outcome is 0. For the second we tested after pushing elements and it should return the number of elements pushed. As for the last one, we tested after popping, it should return the number of elements left.   
 
