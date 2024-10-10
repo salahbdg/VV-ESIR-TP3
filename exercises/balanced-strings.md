@@ -35,10 +35,14 @@ If the string is balanced, the stack need to be empty after going through the wh
 
 1 - We can start with the following initial partition to try cover as possible the exhaustive set of test :
     - Empty string 
+
+    
     ```java
     str = ""
     ```
     - Single character (bracket or no brakcet)
+
+    
     ```java
     // check for bracket
     str = "(" // or any other bracket
@@ -46,10 +50,12 @@ If the string is balanced, the stack need to be empty after going through the wh
     str = "a"
     ```
     - Multiple brackets (both balanced and unbalanced).
+    
         ```java
     str = "(((4(w())a)))" 
     // or
     str = "(((([[{{}}}[}])))))"
+        ```
 
 Balanced Tests: These inputs are expected to return true because they contain properly matched brackets in the correct order.
 Unbalanced Tests: These inputs contain mismatched brackets or improper nesting and should return false.
