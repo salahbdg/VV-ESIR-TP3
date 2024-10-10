@@ -46,7 +46,7 @@ Answer the following questions:
    Here str1 and str2 hold the same information "hello", but they are two distinct references, which justifies the result of assertEquals and assertSame
 
 3. fail keyword can be used in several context others than the one mentioned above:  
-   Fail can be used to mark a long running operation that exceeded a certain time limit
+   - Fail can be used to mark a long running operation that exceeded a certain time limit
    In this code lonRunningFúnction() runs for 6000ms using Thread.sleep(6000), using this we are sure the failure is reacher.
    
       ```java
@@ -72,7 +72,35 @@ Answer the following questions:
         }
     }
 }
-Image of the failure 
+```
+Image of the failure on vscode
 ![image](https://github.com/user-attachments/assets/8bc46a1a-01c0-4155-91fc-c968e6515316)
 
-      ```
+  - Fail can be used too in the context of testing external APIs  
+For example in the code below,we simulate the response of a failing API response (500) with the private method callExternalAoi(),
+then fail is triggered once to stop the code in the point of failure, here when when response status code is different than 200.
+
+```java
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
+
+public class ApiIntegrationTest {
+
+    @Test
+    void testApiIntegration() {
+        int responseStatusCode = callExternalApi();
+
+        if (responseStatusCode != 200) {
+            fail("API call failed with status code: " + responseStatusCode);
+        }
+    }
+
+    private int callExternalApi() {
+        // Simulate an API call
+        return 500; // Simulated error response
+    }
+}
+```
+Image of the failure on vscode
+![image](https://github.com/user-attachments/assets/cd81501b-69f5-43ce-a92d-6dd5dfbe59dc)
+
