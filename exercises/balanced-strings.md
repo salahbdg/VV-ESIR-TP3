@@ -33,8 +33,9 @@ we take out the last opening bracket from the stack and compare it to the closin
 
 If the string is balanced, the stack need to be empty after going through the whole string, and false otherwise.
 
-1 - We can start with the following initial partition to try cover as possible the exhaustive set of test :
-    - Empty string 
+1 - We can start with the following initial partition to try cover as possible the exhaustive set of test :  
+
+Empty string 
 
     
 ```java
@@ -42,7 +43,7 @@ If the string is balanced, the stack need to be empty after going through the wh
 ```
 
 
-    - Single character (bracket or no brakcet)
+Single character (bracket or no brakcet)
 
     
 ```java
@@ -52,7 +53,7 @@ If the string is balanced, the stack need to be empty after going through the wh
     str = "a"
 ```
 
-    - Multiple brackets (both balanced and unbalanced).
+Multiple brackets (both balanced and unbalanced).
     
 ```java
     str = "(((4(w())a)))" 
