@@ -47,7 +47,8 @@ Answer the following questions:
 
 3. fail keyword can be used in several context others than the one mentioned above:  
    Fail can be used to mark a long running operation that exceeded a certain time limit
-   In this code lonRunningFúnction() runs for 6000ms using Thread.sleep(6000), using this we 
+   In this code lonRunningFúnction() runs for 6000ms using Thread.sleep(6000), using this we are sure the failure is reacher.
+   
       ```java
       public class TimeoutTest {
 
