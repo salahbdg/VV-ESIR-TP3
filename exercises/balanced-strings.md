@@ -25,4 +25,46 @@ Write below the actions you took on each step and the results you obtained.
 Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to complete this exercise.
 
 ## Answer
+We used a stack to implement isBalanced method. 
+Code is <a href="https://github.com/salahbdg/VV-ESIR-TP3/blob/xxx/code/tp3-balanced-strings/src/main/java/fr/istic/vv/StringUtils.java">Here</a>
+
+The idea is to use a stack and wherever we encounter an opening bracket, we push it to the stack, and whenever we encounter a closing bracket,
+we take out the last opening bracket from the stack and compare it to the closing bracket using the static private method isMatchingPair.
+
+If the string is balanced, the stack need to be empty after going through the whole string, and false otherwise.
+
+1 - We can start with the following initial partition to try cover as possible the exhaustive set of test :
+    - Empty string 
+    ```java
+    str = ""
+    ```
+    - Single character (bracket or no brakcet)
+    ```java
+    // check for bracket
+    str = "(" // or any other bracket
+    // for any other character
+    str = "a"
+    ```
+    - Multiple brackets (both balanced and unbalanced).
+        ```java
+    str = "(((4(w())a)))" 
+    // or
+    str = "(((([[{{}}}[}])))))"
+
+Balanced Tests: These inputs are expected to return true because they contain properly matched brackets in the correct order.
+Unbalanced Tests: These inputs contain mismatched brackets or improper nesting and should return false.
+Edge Cases: These cases test the behavior of the function with unusual inputs, like strings without brackets and long strings to ensure the function handles them efficiently.
+
+2 - To evaluate the statement coverage, we start by counting the lines of our isBalanced method, we find 11 lines in total.
+And by going through our test cases one by one, we prove that our tests cover the whole lines of the method.
+For example:
+    - isBalanced("(") will execute Lines 1, 2, 5, 6, and 7.
+    - isBalanced("{(])") will cover Lines 1, 2, 5, 6, 8, 9, and 10.
+    - isBalanced("abc") will execute Lines 1, 2, 3, 5, and 11.
+
+In our case, we don't need to add more test cases since the statement coverage is maximum.
+
+
+
+
 
