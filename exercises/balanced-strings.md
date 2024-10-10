@@ -40,6 +40,8 @@ If the string is balanced, the stack need to be empty after going through the wh
 ```java
     str = ""
 ```
+
+
     - Single character (bracket or no brakcet)
 
     
@@ -49,6 +51,7 @@ If the string is balanced, the stack need to be empty after going through the wh
     // for any other character
     str = "a"
 ```
+
     - Multiple brackets (both balanced and unbalanced).
     
 ```java
