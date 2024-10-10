@@ -111,7 +111,8 @@ Image of the failure on vscode
 
 <details>
 
-<summary>Image of the failure on vscode</summary>
+<summary>Image of the failure on vscode</summary>  
+
 ![image](https://github.com/user-attachments/assets/cd81501b-69f5-43ce-a92d-6dd5dfbe59dc)
 
 
