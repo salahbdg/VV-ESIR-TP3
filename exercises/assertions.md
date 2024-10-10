@@ -109,3 +109,15 @@ public class ApiIntegrationTest {
 Image of the failure on vscode
 ![image](https://github.com/user-attachments/assets/cd81501b-69f5-43ce-a92d-6dd5dfbe59dc)
 
+<details>
+
+<summary>Image of the failure on vscode</summary>
+![image](https://github.com/user-attachments/assets/cd81501b-69f5-43ce-a92d-6dd5dfbe59dc)
+
+
+</details>
+
+4. We think that using assertThrows instead of specifying exception in the @Test notation is better for readability especially when we are trying
+   to add many exceptions.
+   Here is a snippet of what 
+   In JUnit 5, using assertThrows makes it easier to consolidate multiple exception tests in one method and offers the ability to assert more details about the exceptions.
