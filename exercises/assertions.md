@@ -77,9 +77,15 @@ public class TimeoutTest {
 }
 
 ```
-   
-Image of the failure on vscode
+
+<details>
+
+<summary>Image of the failure on vscode</summary>  
+
 ![image](https://github.com/user-attachments/assets/8bc46a1a-01c0-4155-91fc-c968e6515316)
+
+
+</details>
 
   - Fail can be used too in the context of testing external APIs  
 For example in the code below,we simulate the response of a failing API response (500) with the private method callExternalAoi(),
@@ -106,8 +112,6 @@ public class ApiIntegrationTest {
     }
 }
 ```
-Image of the failure on vscode
-![image](https://github.com/user-attachments/assets/cd81501b-69f5-43ce-a92d-6dd5dfbe59dc)
 
 <details>
 
