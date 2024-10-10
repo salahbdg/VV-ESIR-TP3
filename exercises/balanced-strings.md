@@ -67,10 +67,10 @@ Edge Cases: These cases test the behavior of the function with unusual inputs, l
 
 2 - To evaluate the statement coverage, we start by counting the lines of our isBalanced method, we find 11 lines in total.
 And by going through our test cases one by one, we prove that our tests cover the whole lines of the method.
-For example:
-    - isBalanced("(") will execute Lines 1, 2, 5, 6, and 7.
-    - isBalanced("{(])") will cover Lines 1, 2, 5, 6, 8, 9, and 10.
-    - isBalanced("abc") will execute Lines 1, 2, 3, 5, and 11.
+For example:  
+    - isBalanced("(") will execute Lines 1, 2, 5, 6, and 7.  
+    - isBalanced("{(])") will cover Lines 1, 2, 5, 6, 8, 9, and 10.  
+    - isBalanced("abc") will execute Lines 1, 2, 3, 5, and 11.  
 
 In our case, we don't need to add more test cases since the statement coverage is maximum.
 
