@@ -72,7 +72,7 @@ Answer the following questions:
         }
     }
 }
-   ```
+      ```
 Image of the failure on vscode
 ![image](https://github.com/user-attachments/assets/8bc46a1a-01c0-4155-91fc-c968e6515316)
 
