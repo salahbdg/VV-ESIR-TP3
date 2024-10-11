@@ -120,16 +120,17 @@ graph TD
     A --> C[Unbalanced Cases]
     A --> D[Edge Cases]
 
-    B --> E{{"{[()]}"}}
-    B --> F{{"{}()[]"}}
+    B --> E["{[()]}"]
+    B --> F["{}()[]"]
 
-    C --> G{{"{(})"}}
-    C --> H{{"([)]"}}
-    C --> I{{"{[}"}}
+    C --> G["{(})"]
+    C --> H["([)]"]
+    C --> I["{[}"]
 
-    D --> J{{"abc"}}
-    D --> K{{"()"}}
-    D --> L{{"" (empty string)}}
+    D --> J["abc"]
+    D --> K["() (single pair)"]
+    D --> L["'' (empty string)"]
+
 ```
 
 
