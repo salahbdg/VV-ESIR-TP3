@@ -95,4 +95,11 @@ To make sure Base choice coverage is satisfied, we need to make sure that all co
 
 Now we can be sure that the Basic choice coverage is satisfied by adding those assertions to our test class.
 
-4 - 
+
+4 -   
+
+As we can see in the above, after running in the directory that contains our pom.xml (with the plugin pitest added)
+```command
+mvn org.pitest:pitest-maven:mutationCoverage
+```
+ 
