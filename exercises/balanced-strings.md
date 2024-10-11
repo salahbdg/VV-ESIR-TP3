@@ -28,7 +28,7 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 We used a stack to implement isBalanced method. 
 Code is <a href="https://github.com/salahbdg/VV-ESIR-TP3/blob/xxx/code/tp3-balanced-strings/src/main/java/fr/istic/vv/StringUtils.java">Here</a>
 
-The idea is to use a stack and wherever we encounter an opening bracket, we push it to the stack, and whenever we encounter a closing bracket,
+The idea is to use a stack and whenever we encounter an opening bracket, we push it to the stack, and whenever we encounter a closing bracket,
 we take out the last opening bracket from the stack and compare it to the closing bracket using the static private method isMatchingPair.
 
 If the string is balanced, the stack need to be empty after going through the whole string, and false otherwise.
