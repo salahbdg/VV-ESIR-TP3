@@ -98,8 +98,16 @@ Now we can be sure that the Basic choice coverage is satisfied by adding those a
 
 4 -   
 
-As we can see in the above, after running in the directory that contains our pom.xml (with the plugin pitest added)
+As we can see in the image below, after running in the directory that contains our pom.xml (with the plugin pitest added)
 ```command
+// command to run pitest
 mvn org.pitest:pitest-maven:mutationCoverage
 ```
- 
+<details>
+
+<summary>Image of the failure on vscode</summary>  
+
+![image](https://github.com/user-attachments/assets/28ebd8c3-58b0-4f13-aefc-830d1373d6fd)
+
+
+</details> 
