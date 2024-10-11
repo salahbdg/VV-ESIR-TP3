@@ -29,7 +29,7 @@ We used a stack to implement isBalanced method.
 Code is <a href="https://github.com/salahbdg/VV-ESIR-TP3/blob/xxx/code/tp3-balanced-strings/src/main/java/fr/istic/vv/StringUtils.java">Here</a>
 
 The idea is to use a stack and whenever we encounter an opening bracket, we push it to the stack, and whenever we encounter a closing bracket,
-we take out the last opening bracket from the stack and compare it to the closing bracket using the static private method isMatchingPair.
+we take out the last opening bracket from the stack and compare it to the closing bracket using the static private method `isMatchingPair`.
 
 If the string is balanced, the stack need to be empty after going through the whole string, and false otherwise.
 
@@ -61,9 +61,9 @@ Multiple brackets (both balanced and unbalanced).
     str = "(((([[{{}}}[}])))))"
 ```
 
-Balanced Tests: These inputs are expected to return true because they contain properly matched brackets in the correct order.
-Unbalanced Tests: These inputs contain mismatched brackets or improper nesting and should return false.
-Edge Cases: These cases test the behavior of the function with unusual inputs, like strings without brackets and long strings to ensure the function handles them efficiently.
+**Balanced Tests**: These inputs are expected to return true because they contain properly matched brackets in the correct order.
+**Unbalanced Tests**: These inputs contain mismatched brackets or improper nesting and should return false.
+**Edge Cases**: These cases test the behavior of the function with unusual inputs, like strings without brackets and long strings to ensure the function handles them efficiently.
 
 We started by implemeting two tests per partition, then to increase our coverage, we decided to generate more ones, we asked claude.ai to provide more assertions.
 
