@@ -15,21 +15,6 @@ Include the improved test code in this file.
 
 ## Answer
 
-# Detecting Test Smells with PMD
-
-## Overview
-This guide explains how to use PMD rules to identify and fix test smells in Java projects, particularly focusing on JUnit tests.
-
-## Available Tools
-- Location: `pmd-documentation` folder
-- Purpose: Contains documentation for PMD rules designed to detect test smells
-
-## Test Projects for Analysis
-You can apply these rules to the following Apache Commons projects:
-- [Commons Collections](https://github.com/apache/commons-collections)
-- [Commons CLI](https://github.com/apache/commons-cli)
-- [Commons Math](https://github.com/apache/commons-math)
-- [Commons Lang](https://github.com/apache/commons-lang)
 
 ## Common Test Smells Detected by PMD
 
@@ -40,21 +25,15 @@ You can apply these rules to the following Apache Commons projects:
 
 2. **JUnit Version Compatibility**
    - JUnit4SuitesShouldUseSuiteAnnotation: Outdated suite definition
-   - JUnit4TestShouldUseAfterAnnotation: Outdated teardown implementation
-   - JUnit4TestShouldUseBeforeAnnotation: Outdated setup implementation
-   - JUnit4TestShouldUseTestAnnotation: Outdated test method naming
 
 3. **Assertion Best Practices**
    - JUnitAssertionsShouldIncludeMessage: Missing assertion messages
    - JUnitTestContainsTooManyAsserts: Overly complex test methods
-   - JUnitTestsShouldIncludeAssert: Missing assertions
-   - UnnecessaryBooleanAssertion: Redundant boolean assertions
 
 4. **Specific Assertion Usage**
    - UseAssertEqualsInsteadOfAssertTrue: Incorrect equality testing
    - UseAssertNullInsteadOfAssertTrue: Incorrect null testing
-   - UseAssertSameInsteadOfAssertTrue: Incorrect reference comparison
-   - UseAssertTrueInsteadOfAssertEquals: Incorrect boolean comparison
+
 
 5. **Exception Testing**
    - JUnitUseExpected: Improper exception testing
@@ -84,10 +63,8 @@ public void testNewArrayList() {
 ```java
 package org.apache.commons.collections4;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 
@@ -98,10 +75,6 @@ class AbstractArrayListTest<E> {
     
     private ArrayList<E> list;
     
-    @BeforeEach
-    void setUp() {
-        list = makeObject();
-    }
     
     @Nested
     @DisplayName("New ArrayList Tests")
@@ -119,25 +92,14 @@ class AbstractArrayListTest<E> {
             assertEquals(0, list.size(), "New list should have size zero");
         }
         
-        @Test
-        @DisplayName("Should throw exception when accessing invalid index")
-        void shouldThrowExceptionOnInvalidAccess() {
-            assertThrows(IndexOutOfBoundsException.class, 
-                () -> list.get(1),
-                "Accessing invalid index should throw IndexOutOfBoundsException");
-        }
     }
     
-    // Assuming this method exists in the original class
-    protected ArrayList<E> makeObject() {
-        return new ArrayList<>();
-    }
 }
 
 ```
 
 ### Improvements Made
-1. Split into multiple focused test methods
+1. Split into additional focused test methods
 2. Added descriptive names using `@DisplayName`
 
 
