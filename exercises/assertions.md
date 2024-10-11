@@ -12,17 +12,17 @@ Answer the following questions:
 
 ## Answer
 
-1. The assertion assertTrue(3 * .4 == 1.2) fails due to floating-point precision issues. The result of **(3 * .4)** is a number close to 1.2 but not 1.2 exactly which justifies the failure of the assertion.
+1. The assertion `assertTrue(3 * .4 == 1.2)` fails due to floating-point precision issues. The result of **(3 * .4)** is a number close to 1.2 but not 1.2 exactly which justifies the failure of the assertion.
    When dealing with floats, we need to define a fault tolerance
    ```java
    import static org.junit.Assert.assertEquals;
    assertEquals(1.2, 3 * 0.4, 1e-9);
    ```
 
-2. The difference between assertEquals and assertSame in Java lies in how they compare objects:
+2. The difference between **assertEquals** and **assertSame** in Java lies in how they compare objects:
    <ul>
     <li>assertEquals: Compares the values of two objects or primitives for equality. For objects, it uses the .equals() method (or == for primitives). It checks whether the objects are "logically equal."</li>
-    <li>assertSame: Compares the references of two objects. It checks if the two variables point to the same object in memory.</li>
+    <li><b>assertSame </b>: Compares the references of two objects. It checks if the two variables point to the same object in memory.</li>
    </ul>
 
    Here is a code used on primitives
