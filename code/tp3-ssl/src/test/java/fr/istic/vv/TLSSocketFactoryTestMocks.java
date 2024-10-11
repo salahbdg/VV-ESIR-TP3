@@ -17,9 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TLSSocketFactoryTestMocks {
 
     /**
-     * Test case for handling null protocols
-     * Verifies that the factory handles the case when both supported
-     * and enabled protocols are null without setting new protocols
+     * Test case for handling null protocols, it verifies that the factory handles the case when both supported and enabled protocols are null without setting new protocols
      */
     @Test
     public void testPrepareSocketWithNullProtocols() {
@@ -45,24 +43,20 @@ public class TLSSocketFactoryTestMocks {
     }
     
     /**
-     * Test case for typical usage scenario
-     * Verifies that the factory correctly prioritizes and sets protocols
-     * when both supported and enabled protocols are available
+     * Test case for typical usage scenario. It verifies that the factory correctly prioritizes and sets protocols, when both supported and enabled protocols are available
      */
     @Test
     public void testTypicalProtocolConfiguration() {
-        // Create an instance of the class under test
         TLSSocketFactory tlsSocketFactory = new TLSSocketFactory();
         
-        // Create a mock SSL socket
         SSLSocket mockSSLSocket = mock(SSLSocket.class);
         
-        // Define protocol arrays
+        // protocol arrays
         String[] supportedProtocols = {"SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"};
         String[] currentlyEnabledProtocols = {"SSLv3", "TLSv1"};
         String[] expectedEnabledProtocols = {"TLSv1.2", "TLSv1.1", "TLSv1", "SSLv3"};
 
-        // Configure mock behavior for protocol methods
+        // Configure mock behavior for the protocol methods
         when(mockSSLSocket.getEnabledProtocols()).thenReturn(shuffle(supportedProtocols));
         when(mockSSLSocket.getSupportedProtocols()).thenReturn(currentlyEnabledProtocols);
         
@@ -74,14 +68,12 @@ public class TLSSocketFactoryTestMocks {
             return null; // Required return for void method
         }).when(mockSSLSocket).setEnabledProtocols(expectedEnabledProtocols);
 
-        // Execute the method under test
+        // execution of the method
         tlsSocketFactory.prepareSocket(mockSSLSocket);
     }
     
     /**
-     * Utility method to randomize the order of protocols in an array
-     * This ensures the test isn't dependent on the order of protocols
-     * 
+     * Utility method to randomize the order of protocols in an array. This ensures the test isn't dependent on the order of protocols
      * @param inputArray The array of strings to be shuffled
      * @return A new array with the same elements in random order
      */
