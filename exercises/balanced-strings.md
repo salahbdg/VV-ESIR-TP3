@@ -65,6 +65,8 @@ Balanced Tests: These inputs are expected to return true because they contain pr
 Unbalanced Tests: These inputs contain mismatched brackets or improper nesting and should return false.
 Edge Cases: These cases test the behavior of the function with unusual inputs, like strings without brackets and long strings to ensure the function handles them efficiently.
 
+We started by implemeting two tests per partition, then to increase our coverage, we decided to generate more ones, we asked claude.ai to provide more assertions.
+
 2 - To evaluate the statement coverage, we start by counting the lines of our isBalanced method, we find 11 lines in total.
 And by going through our test cases one by one, we prove that our tests cover the whole lines of the method.
 For example:  
@@ -72,9 +74,23 @@ For example:
     - isBalanced("{(])") will cover Lines 1, 2, 5, 6, 8, 9, and 10.  
     - isBalanced("abc") will execute Lines 1, 2, 3, 5, and 11.  
 
-In our case, we don't need to add more test cases since the statement coverage is maximum.
+In our case, we don't need to add more test cases since the statement coverage is maximum.  
 
+3 - The two line of code below use two boolean operators  
+  
+```java
+if (ch == '(' || ch == '{' || ch == '[') { // Line 3
+    ...
+} else if (ch == ')' || ch == '}' || ch == ']') { // Line 5
+    ...
+}
+```
 
+To make sure Base choice coverage is satisfied, we need to make sure that all combinations of our boolean operators are met.
 
+- assertTrue(isBalanced("()"));, assertTrue(isBalanced("{}"));, assertTrue(isBalanced("[]")); ensure that each type of opening bracket works corretly
+- assertFalse(isBalanced(")(")); tests closing before opening.
+- assertFalse(isBalanced("{]")); tests the mix of closing brackets.
+- assertFalse(isBalanced("([)]")); tests nested wrong order to cover more complex combinations of conditions.
 
 
