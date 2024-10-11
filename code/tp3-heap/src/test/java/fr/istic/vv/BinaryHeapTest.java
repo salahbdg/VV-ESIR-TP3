@@ -152,7 +152,7 @@ we push the same values multiple time to see if the order is still maintened eve
         assertThrows(NoSuchElementException.class,heap::pop);
     }
 /*
-to test if the child are always calculated and the heap is still correct even with differnet push and pop
+to test if the child are always calculated and the heap is still correct even with different push and pop
  */
     @Test
     void testPopOdElem(){
