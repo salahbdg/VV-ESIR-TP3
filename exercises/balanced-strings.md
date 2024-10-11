@@ -128,7 +128,7 @@ graph TD
     C --> I{{"{[}"}}
 
     D --> J{{"abc"}}
-    D --> K{{"()" (single pair)}}
+    D --> K{{"()"}}
     D --> L{{"" (empty string)}}
 ```
 
