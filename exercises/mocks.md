@@ -84,4 +84,8 @@ private String[] shuffle(String[] inputArray) {
 ```
 - Randomizes protocol order to ensure the test isn't order-dependent
 
-
+## Expected Behavior of TLSSocketFactory
+Based on these tests, we can infer that the `TLSSocketFactory` class should:
+1. Handle null protocols gracefully
+2. Prioritize protocols in a specific order (TLSv1.2 > TLSv1.1 > TLSv1 > SSLv3)
+3. Set enabled protocols based on what's supported by the socket
