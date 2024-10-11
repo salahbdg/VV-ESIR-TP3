@@ -93,4 +93,6 @@ To make sure Base choice coverage is satisfied, we need to make sure that all co
 - assertFalse(isBalanced("{]")); tests the mix of closing brackets.
 - assertFalse(isBalanced("([)]")); tests nested wrong order to cover more complex combinations of conditions.
 
+Now we can be sure that the Basic choice coverage is satisfied by adding those assertions to our test class.
 
+4 - 
