@@ -105,7 +105,10 @@ mvn org.pitest:pitest-maven:mutationCoverage
 
 <summary>Image of the failure on vscode</summary>  
 
-![image](https://github.com/user-attachments/assets/28ebd8c3-58b0-4f13-aefc-830d1373d6fd)
+![image](https://github.com/user-attachments/assets/28ebd8c3-58b0-4f13-aefc-830d1373d6fd)  
+
+![image](https://github.com/user-attachments/assets/94ca4b6a-01a8-4c6b-b0d1-a9cdbaefaa5e)
+
 
 
 </details> 
