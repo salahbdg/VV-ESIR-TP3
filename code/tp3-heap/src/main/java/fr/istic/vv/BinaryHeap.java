@@ -44,7 +44,7 @@ class BinaryHeap<T> {
     }
 // count the number of elements in the heap, the size of the heap
     public int count() { return list.size();}
-    //reorder the heap after insertion of a new element from bottom to top, when there's a new push to put the addes element on the right place
+    //reorder the heap after insertion of a new element from bottom to top, when there's a new push to put the added element on the right place
     private void restoreOrderUp(int i) {
         T temp = list.get(i);
         while (i >0){
