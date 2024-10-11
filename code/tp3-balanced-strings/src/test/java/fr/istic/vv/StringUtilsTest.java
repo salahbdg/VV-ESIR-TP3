@@ -11,11 +11,11 @@ class StringUtilsTest {
     @Test
     void testBalancedInputs() {
         // Balanced cases
-        assertTrue(isBalanced(""));                  // Empty string
+        assertTrue(isBalanced(""));                  // if the string is empty
         assertTrue(isBalanced("()"));                // Single pair of parentheses
         assertTrue(isBalanced("{}"));                // Single pair of curly braces
         assertTrue(isBalanced("[]"));                // Single pair of square brackets
-        assertTrue(isBalanced("{[()]}"));            // Nested mixed brackets
+        assertTrue(isBalanced("{[()]}"));            // Mixed brackets
         assertTrue(isBalanced("[(())]"));            // More complex nested structure
         assertTrue(isBalanced("{[()()()()]}"));      // Multiple nested pairs
     }
