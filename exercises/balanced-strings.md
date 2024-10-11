@@ -61,8 +61,9 @@ Multiple brackets (both balanced and unbalanced).
     str = "(((([[{{}}}[}])))))"
 ```
 
-**Balanced Tests**: These inputs are expected to return true because they contain properly matched brackets in the correct order.
-**Unbalanced Tests**: These inputs contain mismatched brackets or improper nesting and should return false.
+**Balanced Tests**: These inputs are expected to return true because they contain properly matched brackets in the correct order.   
+
+**Unbalanced Tests**: These inputs contain mismatched brackets or improper nesting and should return false.   
 **Edge Cases**: These cases test the behavior of the function with unusual inputs, like strings without brackets and long strings to ensure the function handles them efficiently.
 
 We started by implemeting two tests per partition, then to increase our coverage, we decided to generate more ones, we asked claude.ai to provide more assertions.
